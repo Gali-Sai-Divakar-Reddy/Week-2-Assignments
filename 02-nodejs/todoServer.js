@@ -45,7 +45,7 @@ const {v4:uuid} = require('uuid');
 
 const app = express();
 app.use(express.json());
-port = 3000
+const port = 3000
 
 const TODOS = []
 
@@ -103,7 +103,7 @@ app.delete('/todos/:id', (req,res) => {
     res.status(404).json({status: "not found"})
   }
 })
-// app.listen(port, ()=> {
+// app.listen(port, () => {
 //   console.log(`server started on ${port}`)
 // })
 module.exports = app;
